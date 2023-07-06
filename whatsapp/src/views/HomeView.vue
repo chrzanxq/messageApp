@@ -4,7 +4,7 @@
             <div class="bg-gray-100 w-full flex justify-between">
                 <img class="rounded-full ml-1 w-10" src="https://random.imagecdn.app/100/100" alt="">
                 <div class="flex items-center justify-center">
-                    <AccountGroupOutline fillColor="#515151" class="mr-6" />
+                    <AccountGroupOutline fillColor="#515151" class=" mr-6 cursor-pointer" />
                     <DotsHorizontalIcon fillColor="#515151" class="mr-6" />
                 </div>
             </div>
@@ -30,7 +30,12 @@
         </div>
         <ChatsView class="mt-[100px]" />
 
-        <div class="ml-[420px] fixed w-[calc(100vw-420px)] h-[100vh] bg-gray-100 text-center">
+        <div v-if="open">
+            <MessageView />
+        </div>
+
+        <div v-else>
+            <div class="ml-[420px] fixed w-[calc(100vw-420px)] h-[100vh] bg-gray-100 text-center">
             <div class="w-full flex items-center justify-center">
                 <div class="grid h-screen place-items-center">
 
@@ -43,8 +48,8 @@
                     <div>Use MessagApp on up to 4 linked devices and 1 phone at the same time</div>
                 </div>
                 </div>
-
             </div>
+        </div>
         </div>
 
 
@@ -53,10 +58,14 @@
 
 <script setup>
 import ChatsView from './ChatsView.vue'
+import MessageView from './MessageView.vue'
 
 import AccountGroupOutline from 'vue-material-design-icons/AccountGroupOutline.vue'
 import DotsHorizontalIcon from 'vue-material-design-icons/DotsHorizontal.vue'
 import MagnifyIcon from 'vue-material-design-icons/Magnify.vue'
+import { ref } from 'vue'
+
+let open = ref(true)
 
 </script>
 
