@@ -16,7 +16,33 @@
           <DotsHorizontalIcon fillColor="#515151" class="mr-6" />
         </div>
       </div>
-      <div id="MessagesSection"></div>
+      <div 
+      id="MessagesSection"
+      class="
+        pt-20
+        pb-8
+        z-[-1]
+        h-[calc(100vh-65px)]
+        w-[calc(100vw-420px)]
+        overflow-auto
+        fixed
+        touch-auto
+      "
+      >
+        <div class="px-20 text-sm">
+           <div class="flex w-[calc(100%-50px)]">
+              <div class="inline-block bg-white p-2 rounded-md my-1">
+                assdasdasdafffffffffffffffff
+              </div>
+           </div>
+           <div class="flex justify-end space-x-1 w-[calc(100%-50px)] float right">
+              <div class="inline-block bg-green-200 p-2 rounded-md my-1">
+                assdasdasdafffffffffffffffff
+              </div>
+           </div>
+        </div>
+
+      </div>
       <div class="w-[calc(100vw-420px)] p-2.5 z-10 bg-[#F0F0F0] fixed bottom-0">
                 <div class="flex items-center justify-center">
                     <EmoticonExcitedOutlineIcon :size="27" fillColor="#515151" class="mx-1.5" />
